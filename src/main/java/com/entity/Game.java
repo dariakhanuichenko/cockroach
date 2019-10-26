@@ -4,23 +4,23 @@ package com.entity;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+public class Game {
 
-public class User {
     @Id
     private Long id;
 
-    private String username;
+    private String title;
 
-    private List<Long> gameId;
+    private Integer numberOfUsers;
 
-    private Integer score;
+    private String gameUrl;
 
+    private String status;
 
+    private Integer size;
 }
