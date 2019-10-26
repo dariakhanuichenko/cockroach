@@ -16,4 +16,6 @@ public class Insect {
     private Long gameId;
 
     private String type;
+
+    private Boolean isAlive;
 }

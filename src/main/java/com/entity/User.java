@@ -22,5 +22,7 @@ public class User {
 
     private Integer score;
 
+    private Boolean isMyTurn;
+
 
 }

@@ -22,5 +22,7 @@ public class Game {
 
     private String status;
 
-    private Integer size;
+    private Integer sizeVertical;
+
+    private Integer sizeHorizontal;
 }
