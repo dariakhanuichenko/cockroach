@@ -44,8 +44,9 @@ public class InsectService {
         );
     }
 
-//    @PostConstruct
-//    public void init(){
-//        insectRepository.save(items);
-//    }
+    @PostConstruct
+   public void init(){
+
+        //insectRepository.save(items);
+  }
 }

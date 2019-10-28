@@ -18,7 +18,7 @@ public class User {
 
     private String username;
 
-    private List<Long> gameId;
+    private Long gameId;
 
     private Integer score;
 
