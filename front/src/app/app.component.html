@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<img src='https://x-lines.ru/letters/i/cyrillicdreamy/0130/792e0c/30/1/ep8wg141j7ywg1byjf8nyineewofru4xjw.png' alt='image' class="center1">
+
+<div layout="row" flex="32" style="text-align:center">
+
+
+  <button  class="top-menu custom-cur" mat-button [routerLink]="['main']">Main</button>
+  <button  class="top-menu custom-cur" mat-button [matMenuTriggerFor] = "menu">Play a game</button>
+  <mat-menu #menu = "matMenu">
+    <!--ПЕРВЫЙ СПОСОБ ЧЕРЕЗ ts-->
+    <button class="submenu custom-cur" mat-menu-item (click)="createGame()">Create a game</button>
+    <!--ВТОРОЙ СПОСОБ ЧЕРЕЗ HTML-->
+    <button class="submenu custom-cur" mat-menu-item [routerLink]="['rules']">Rules</button>
+    <button class="submenu custom-cur" mat-menu-item [routerLink]="['room-busy']">Room is busy</button>
+    <button class="submenu custom-cur" mat-menu-item [routerLink]="['start-play']">Start play</button>
+  </mat-menu>
+
+  <button class="top-menu" mat-button  [matMenuTriggerFor] = "menu1" >Personal page</button>
+  <mat-menu #menu1 = "matMenu">
+    <button class="submenu" mat-menu-item (click)="winnerPage()">Winner Page</button>
+    <button class="submenu" mat-menu-item (click)="resultPage()">Result of game</button>
+
+  </mat-menu>
+
+</div>
+<div *ngIf="route.children.length !== 0">
+  <router-outlet></router-outlet>
+<br><br>
+<!--<div class="production">
+<p>@Сельд'[A,R,R,A,Y] Production</p>
+</div>-->

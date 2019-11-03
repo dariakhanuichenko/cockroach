@@ -1,0 +1,9 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.bg-img
+{
+  background-image: url('http://ilyakhasanov.ru/images/background/16.jpg');
+  background-position: center;
+  background-repeat: repeat;
+}

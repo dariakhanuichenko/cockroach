@@ -1,0 +1,28 @@
+<div *ngIf="route.children.length === 0" style="text-align:center">
+  <h2>Create a game</h2>
+  <div class="field">
+    <p>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Name of test:</mat-label>
+        <input matInput placeholder="Name">
+        <mat-icon matSuffix>bug_report</mat-icon>
+        <mat-hint>This field is required!</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline" color="#371C05">
+        <mat-label>Amount of players:</mat-label>
+        <input matInput placeholder="Amount">
+        <mat-icon matSuffix color="#371C05">bug_report</mat-icon>
+        <mat-hint >Put only numbers (max 15)!</mat-hint>
+      </mat-form-field>
+    </p>
+
+  </div>
+  <div class="example-button-row">
+    <br><button  ng-click='clearCompleted()' mat-stroked-button [routerLink]="['./play']">Play</button>
+  </div>
+
+</div>
+<router-outlet></router-outlet>

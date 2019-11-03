@@ -1,0 +1,8 @@
+<div *ngIf="route.children.length === 0" style="text-align: center">
+<h2>Congratulations!</h2>
+  <img src='http://www.picshare.ru/uploads/191104/agsIrPtn29.png' alt='image' width="25%" height="25%"/>
+  <div class="example-button-row">
+    <br><button  ng-click='clearCompleted()' mat-stroked-button [routerLink]="['./play']">Play again</button>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,16 @@
+.entrance{
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#371C05;
+  background-color:#F9F2EC;
+  height: 150px;
+  width: 500px;
+  border-radius: 20px;
+  padding:35px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}

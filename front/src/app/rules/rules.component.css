@@ -1,0 +1,35 @@
+
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 3px;
+  color:#371C05;
+  padding:40px;
+}
+
+table {
+  width: 60%;
+  margin: auto;
+  padding-top: 10px;
+  border-radius:25px;
+}
+th{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 75%;
+  letter-spacing: 3px;
+  color:#371C05;
+  height: 7px;
+}
+
+
+td{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 1.0em;
+  line-height: 75%;
+  letter-spacing: 3px;
+  color:#371C05;
+  height: 7px;
+}
+

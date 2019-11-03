@@ -1,0 +1,158 @@
+<div style="text-align:center">
+<h2>Room (Name of room)</h2><br>
+<mat-progress-bar mode="determinate" value="40" style="width:45%"></mat-progress-bar>
+<br><table style="width: 100%">
+  <tr>
+    <td>
+
+<table mat-table [dataSource]="dataSource" class="example-container mat-elevation-z8">
+
+  <ng-container matColumnDef="nul">
+    <th  mat-header-cell  *matHeaderCellDef style="text-align: center"></th>
+    <td  mat-cell  *matCellDef="let element" style="padding: 0">{{element.nul}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="one">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">A</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.one}}</button> </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="two">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">B</th>
+    <td mat-cell *matCellDef="let element"><button mat-menu-item style="padding: 2px">{{element.two}}</button> </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="three">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">C</th>
+    <td mat-cell *matCellDef="let element"><button mat-menu-item style="padding: 4px"> {{element.three}} </button></td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="four">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">D</th>
+    <td mat-cell *matCellDef="let element"><button mat-menu-item style="padding: 2px">{{element.four}} </button></td>
+  </ng-container>
+
+  <ng-container matColumnDef="five">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">F</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.five}} </button></td>
+  </ng-container>
+
+  <ng-container matColumnDef="six">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">E</th>
+    <td mat-cell *matCellDef="let element"><button mat-menu-item style="padding: 2px"> {{element.six}} </button></td>
+  </ng-container>
+
+  <ng-container matColumnDef="seven">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">G</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.seven}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="eight" >
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">H</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.eight}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nine">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">I</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.nine}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ten">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">J</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.ten}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="eleven">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">S</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.eleven}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="twelve">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">P</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.twelve}}</button> </td>
+  </ng-container>
+
+  <ng-container matColumnDef="thirteen">
+    <th mat-header-cell *matHeaderCellDef style="text-align: center">O</th>
+    <td mat-cell *matCellDef="let element"> <button mat-menu-item style="padding: 2px">{{element.thirteen}}</button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+    </td>
+
+    <div class="field">
+      <p><br>
+        <mat-form-field appearance="outline">
+          <mat-label>First coordinate:</mat-label>
+          <input matInput placeholder="Letter" [formControl]="myControl1" [matAutocomplete]="auto1">
+          <mat-autocomplete #auto1="matAutocomplete">
+            <mat-option *ngFor="let option of options1" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <mat-icon matSuffix>bug_report</mat-icon>
+          <mat-hint>Only one letter!</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" class="example-full-width">
+
+          <mat-label>Second coordinate:</mat-label>
+
+          <input matInput placeholder="Number" aria-label="Number" [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <mat-icon matSuffix color="#371C05">bug_report</mat-icon>
+          <mat-hint >Put only number (1-8)!</mat-hint>
+
+        </mat-form-field>
+
+      </p>
+
+    </div>
+      <div class="example-button-row">
+        <br><button  ng-click='clearCompleted()' mat-stroked-button>Play </button>
+      </div>
+
+    <td>
+<!--<mat-card>
+  <mat-card-content>-->
+
+
+    <section class="example-section">
+
+      <label class="example-margin">Turn to:</label>
+      <mat-radio-group [(ngModel)]="labelPosition">
+        <mat-radio-button class="example-margin" value="first">User1111111 60</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="second">User2 50</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="third">User3 45</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="four">User4 40</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="five">User5 55</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="six">User6 20</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="seven">User7 30</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="eight">User8 35</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="nine">User9 40</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="ten">User10 45</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="eleven">User11 55</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="twelve">User12 30</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="thirteen">User13 60</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="forteen">User14 70</mat-radio-button><br>
+        <mat-radio-button class="example-margin" value="fifteen">User15 15</mat-radio-button><br>
+      </mat-radio-group>
+    </section>
+    </td>
+  </tr>
+<!--</mat-card-content>
+</mat-card>-->
+</table>
+</div>
+
+
